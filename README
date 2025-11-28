@@ -12,9 +12,9 @@ terminal 1:     node api.js
 
 
 
-terminal 2 :   python .\upload_img.py
+terminal 2 :   node worker.js
 
 
 
-terminal 3: node worker.js
+terminal 3: streamlit run main.py
 
