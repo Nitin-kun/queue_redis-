@@ -1,0 +1,20 @@
+npm install 
+
+
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+
+docker run -itd -p 6379:6379 redis
+
+terminal 1:     node api.js
+
+
+
+terminal 2 :   python .\upload_img.py
+
+
+
+terminal 3: node worker.js
+
