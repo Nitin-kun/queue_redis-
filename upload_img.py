@@ -3,7 +3,7 @@ import os
 
 API_URL = 'http://localhost:3000/process-image'
 IMAGE_DIR = 'sample_img'
-NUM_IMAGES = 1
+NUM_IMAGES = 10
 def send_all_images():
     print(f"Starting image path submission to {API_URL}")
     for i in range(1, NUM_IMAGES + 1):
