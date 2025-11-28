@@ -4,15 +4,20 @@ const { spawn } = require("child_process");
 
 const path = require("path");
 
-const connection = { host: "localhost", port: 6379 };
+const connection = { host: "localhost", port: 6379,  };
 
 const worker = new Worker("anotation-queue", async (job) => {
+  
   console.log(`Processing job: ${job.id}`);
   const imgPath = job.data.imgPath;
   const jobid = job.id;
   console.log(imgPath)
   return await runPython(imgPath, jobid);
 }, { connection });
+
+
+
+
 
 function runPython(imgPath, jobid) {
   return new Promise((resolve, reject) => {

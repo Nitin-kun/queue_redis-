@@ -88,8 +88,8 @@ def processImg(imgPath, jobid):
     output_path = f'output/{jobid}.jpg'
     cv2.imwrite(output_path, cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 
-    print(output_path)  # <-- return to Node.js
-    return output_path
+    print(output_path)  
+
 
 
 if __name__ == "__main__":
